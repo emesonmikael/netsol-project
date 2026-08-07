@@ -14,7 +14,6 @@ import { WebView } from 'react-native-webview';
 
 const SITE_URL = 'https://ntelecom.sgp.tsmx.com.br/accounts/central/login?next=/central/home/';
 const WHATSAPP_URL = 'https://wa.me/5584999181760';
-const PRIVACY_POLICY_URL = 'https://pol-tica-de-privacidade-netsol-clie.vercel.app/';
 const LOADING_TIMEOUT_MS = 8000;
 
 export default function App() {
@@ -64,12 +63,8 @@ export default function App() {
   }, []);
 
   const handleSupportPress = useCallback(() => {
-  Linking.openURL(WHATSAPP_URL);
-}, []);
-
-const handlePrivacyPress = useCallback(() => {
-  Linking.openURL(PRIVACY_POLICY_URL);
-}, []);
+    Linking.openURL(WHATSAPP_URL);
+  }, []);
 
   // Allow ALL navigations (critical for login redirects)
   const handleShouldStartLoad = useCallback(() => {
@@ -101,26 +96,13 @@ const handlePrivacyPress = useCallback(() => {
           </TouchableOpacity>
 
           <TouchableOpacity
-  testID="privacy-button"
-  onPress={handlePrivacyPress}
-  style={styles.privacyButton}
-  activeOpacity={0.8}
->
-  <Text style={styles.privacyText}>
-    Política
-  </Text>
-</TouchableOpacity>
-
-<TouchableOpacity
-  testID="support-button"
-  onPress={handleSupportPress}
-  style={styles.supportButton}
-  activeOpacity={0.8}
->
-  <Text style={styles.supportText}>
-    Suporte
-  </Text>
-</TouchableOpacity>
+            testID="support-button-web"
+            onPress={handleSupportPress}
+            style={styles.webSupportButton}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.webSupportText}>Falar com Suporte</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -175,26 +157,13 @@ const handlePrivacyPress = useCallback(() => {
       )}
 
       <TouchableOpacity
-  testID="privacy-button"
-  onPress={handlePrivacyPress}
-  style={styles.privacyButton}
-  activeOpacity={0.8}
->
-  <Text style={styles.privacyText}>
-    Política
-  </Text>
-</TouchableOpacity>
-
-<TouchableOpacity
-  testID="support-button"
-  onPress={handleSupportPress}
-  style={styles.supportButton}
-  activeOpacity={0.8}
->
-  <Text style={styles.supportText}>
-    Suporte
-  </Text>
-</TouchableOpacity>
+        testID="support-button"
+        onPress={handleSupportPress}
+        style={styles.supportButton}
+        activeOpacity={0.8}
+      >
+        <Text style={styles.supportText}>Suporte</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
@@ -342,35 +311,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
-  privacyButton: {
-  position: 'absolute',
-  bottom: 85,
-  right: 20,
-  backgroundColor: '#1565C0',
-  paddingHorizontal: 18,
-  paddingVertical: 14,
-  borderRadius: 30,
-  flexDirection: 'row',
-  alignItems: 'center',
-  ...Platform.select({
-    ios: {
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-    },
-    android: {
-      elevation: 5,
-    },
-    web: {
-      boxShadow: '0px 2px 4px rgba(0,0,0,0.25)',
-    },
-  }),
-},
-
-privacyText: {
-  color: '#fff',
-  fontWeight: 'bold',
-  fontSize: 14,
-},
 });
