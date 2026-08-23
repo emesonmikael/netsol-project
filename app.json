@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "NetSol Cliente",
-    "slug": "netsol-cliente",
-    "version": "2.0.0",
+    "name": "Netsol Cliente",
+    "slug": "Netsol-Cliente",
+    "version": "4.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "netsol-cliente",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.netsol",
-      "versionCode": 2,
+      "versionCode":4,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#d9252a"
@@ -43,8 +43,8 @@
         "expo-build-properties",
         {
           "android": {
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
             "minSdkVersion": 24,
             "kotlinVersion": "2.0.21",
             "newArchEnabled": false
