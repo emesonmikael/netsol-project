@@ -1,9 +1,9 @@
 {
   "expo": {
     "name": "Netsol Cliente",
-    "slug": "Netsol-Cliente",
+    "slug": "netsol-cliente",
     "version": "4.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "netsol-cliente",
     "userInterfaceStyle": "light",
