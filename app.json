@@ -21,7 +21,7 @@
       "permissions": [
         "INTERNET"
       ],
-      "edgeToEdgeEnabled": false
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "bundler": "metro",
@@ -47,7 +47,10 @@
             "targetSdkVersion": 36,
             "minSdkVersion": 24,
             "kotlinVersion": "2.0.21",
-            "newArchEnabled": false
+            "newArchEnabled": false,
+            "enableMinifyInReleaseBuilds": true,
+"enableShrinkResourcesInReleaseBuilds": true,
+"extraProguardRules": "-keep class com.facebook.hermes.** { *; }\n-keep class com.facebook.jni.** { *; }\n-keep class com.swmansion.rnscreens.** { *; }\n-keep class com.swmansion.gesturehandler.** { *; }\n-keep class com.reactnativecommunity.webview.** { *; }\n-keep class com.th3rdwave.safeareacontext.** { *; }"
           }
         }
       ]
