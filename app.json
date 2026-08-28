@@ -2,7 +2,7 @@
   "expo": {
     "name": "Netsol Cliente",
     "slug": "netsol-cliente",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "netsol-cliente",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.netsol",
-      "versionCode": 6,
+      "versionCode": 7,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#d9252a"
