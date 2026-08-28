@@ -2,7 +2,7 @@
   "expo": {
     "name": "Netsol Cliente",
     "slug": "netsol-cliente",
-    "version": "4.0.0",
+    "version": "4.0.2",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "netsol-cliente",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.netsol",
-      "versionCode":4,
+      "versionCode": 6,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#d9252a"
@@ -49,11 +49,14 @@
             "kotlinVersion": "2.0.21",
             "newArchEnabled": false,
             "enableMinifyInReleaseBuilds": true,
-"enableShrinkResourcesInReleaseBuilds": true,
-"extraProguardRules": "-keep class com.facebook.hermes.** { *; }\n-keep class com.facebook.jni.** { *; }\n-keep class com.swmansion.rnscreens.** { *; }\n-keep class com.swmansion.gesturehandler.** { *; }\n-keep class com.reactnativecommunity.webview.** { *; }\n-keep class com.th3rdwave.safeareacontext.** { *; }"
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-keep class com.facebook.hermes.** { *; }\n-keep class com.facebook.jni.** { *; }\n-keep class com.swmansion.rnscreens.** { *; }\n-keep class com.swmansion.gesturehandler.** { *; }\n-keep class com.reactnativecommunity.webview.** { *; }\n-keep class com.th3rdwave.safeareacontext.** { *; }"
           }
         }
-      ]
+      ],
+      "expo-font",
+      "expo-status-bar",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
